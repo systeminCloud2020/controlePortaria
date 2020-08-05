@@ -5,14 +5,19 @@
 
 @font-face {
 	font-family: Montserrat;
-	src: url(../fonts/Montserrat/Montserrat-Thin.ttf)
+	src: url(../fonts/Montserrat/Montserrat-Regular.ttf)
+}
+
+@font-face {
+	font-family: Montserrat-Bold;
+	src: url(../fonts/Montserrat/Montserrat-Bold.ttf)
 }
 
 body{
     width: 100%;
     height: auto;
     margin: auto;
-    background-color: rgb(68, 68, 68);
+    background-color: rgb(255, 255, 255);
     font-family: Montserrat;
 }
 
@@ -22,11 +27,12 @@ body{
     grid-template-areas: 
     'header'
     'main'
+    'footer'
     ;
     width: 100%;
-    min-width: 800px;
     height: auto;
-    margin: auto;
+    margin: 0;
+    padding: 0;
     background-color: rgb(255, 255, 255);
 }
 
@@ -56,8 +62,10 @@ body{
 }
 
 #header div.logo h1{
-    font-size: 2em;
+    color: rgb(68, 68, 68);
+    font-size: 2.5em;
     margin: auto auto auto 2%;
+    font-family: Montserrat-Bold;
 }
 
 #header div.menu{
@@ -76,6 +84,7 @@ body{
     font-size: 1em;
     font-weight: bold;
     cursor: pointer;
+    color: rgb(68, 68, 68);
 }
 
 #header div.menu select{
@@ -86,6 +95,7 @@ body{
     font-weight: bold;
     font-family: Montserrat;
     outline: none;
+    color: rgb(68, 68, 68);
 }
 
 #header div.menu select option{
@@ -95,6 +105,7 @@ body{
     font-weight: bold;
     font-family: Montserrat;
     outline: none;
+    color: rgb(68, 68, 68);
 }
 
 #header div.msg{
@@ -143,11 +154,12 @@ body{
     grid-gap: 15px;
     grid-template-areas: 
     'menu'
+    'user'
     'tela'
     ;
     width: 100%;
     height: auto;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255)
 }
 
 section#menu{
@@ -164,7 +176,7 @@ section#menu{
     border-bottom: 5px solid rgb(175, 6, 3);
 }
 
-div.img{
+section#menu div.img{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,20 +191,269 @@ div.img{
     cursor: pointer;
 }
 
-div.img:hover{
+section#menu div.img:hover{
     transform: rotate(360deg);
 }
 
-div.img:hover img{
+section#menu div.img:hover img{
     transform: rotate(-360deg);
 }
 
-img{
+section#menu img{
     width: 45%;
     margin: auto;
     transition: 1.1s;
 }
 
+/*******************************************************************/
+/* Configurações da Sessão Usuário */
+
+section#user{
+    grid-area: user;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    padding: 1%;
+    color: rgb(68, 68, 68);
+    font-weight: bold;
+}
+
+section#user div#foto{
+    width: 80px;
+    height: 90px;
+    margin: auto;
+    border-radius: 10px;
+    border: 5px solid rgb(175, 6, 3);
+}
+
+section#user div#foto img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+section#user div#userName{
+    margin: auto;
+}
+
+section#user div#userName h1{
+    font-size: 2em;
+}
+
+section#user div#userName p{
+    font-size: 1em;
+}
+
+section#user div#dateTime{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+section#user div#dateTime p{
+    font-size: 1.4em;
+    margin-right: 15%;
+}
+
+/*******************************************************************/
+/* Configurações da div linha e div triângulo */
+div.linha{
+    width: 100%;
+    height: 5px;
+    margin: auto;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgb(175, 6, 3), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+}
+
+div.triangulo{
+    width: 0;
+    height: 0;
+    border: 15px solid;
+    margin: 0 auto 2% auto;
+    border-color: rgb(175, 6, 3) transparent  transparent;
+}
+
+/*******************************************************************/
+/* Configurações da sessão tela */
+
 section#tela{
     grid-area: tela;
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    padding: 0;
+}
+
+/*******************************************************************/
+/* Configurações do conteúdo */
+
+section#tela div#conteudo{
+    position: relative;
+    width: 95%;
+    height: auto;
+    margin: auto;
+    padding: 2%;
+}
+
+section#tela div#conteudo div#comunicado{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: auto;
+    margin: 0 0 4% 0;
+    padding: 1%;
+    color: rgb(68, 68, 68);
+    font-size: 13pt;
+    font-weight: bolder;
+}
+
+section#tela div#conteudo h1{
+    width: 80%;
+    height: auto;
+    margin: auto auto 2% auto;
+    text-align: center;
+    font-size: 2em;
+    color: rgb(175, 6, 3);
+}
+
+/*******************************************************************/
+/* Configurações dos comunicados */
+
+section#tela div#conteudo div#comunicado div#titulo{
+    width: 480px;
+    height: auto;
+    margin: 0 5% 0 0;
+    padding: 2%;
+    background-color: rgb(175, 6, 3);
+    color: rgb(255, 255, 255);
+    border-top-right-radius: 500px;
+    border-bottom-right-radius: 500px;
+    font-size: 1.2em;
+    font-weight: bolder;
+    font-family: Montserrat-Bold;
+}
+
+section#tela div#conteudo div#comunicado div#menssage{
+    width: 100%;
+    height: auto;
+    font-size: 1em;
+    text-align: justify;
+}
+
+section#tela div#conteudo div#comunicado button{
+    width: 250px;
+    margin: auto auto auto 5%;
+    padding: 1%;
+    background-color: rgb(175, 6, 3);
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    font-weight: bolder;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+    font-family: Montserrat-Bold;
+    border: none;
+}
+
+section#tela div#conteudo div#comunicado button:hover{
+    background-color: rgb(143, 2, 0);
+}
+
+/*******************************************************************/
+/* Configurações das últimas ocorrências */
+
+section#tela div#ultimasOcorrencias{
+    position: relative;
+    width: 98%;
+    height: auto;
+    margin: 4% 0 4% 0;
+    padding: 1%;
+    color: rgb(68, 68, 68);
+    font-size: 13pt;
+    font-weight: bolder;
+}
+
+section#tela div#conteudo div#ultimasOcorrencias div.containerOcorrencias{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+    margin: 0 0 2% 0;
+}
+
+section#tela div#conteudo div#ultimasOcorrencias div.img{
+    margin: auto;
+}
+
+section#tela div#conteudo div#ultimasOcorrencias img{
+    width: 60px;
+    height: 60px;
+}
+
+section#tela div#conteudo div#ultimasOcorrencias div.titulo{
+    margin: auto;
+    font-size: 1.2em;
+    color: rgb(68, 68, 68);
+    font-family: Montserrat-Bold;
+}
+
+section#tela div#conteudo div#ultimasOcorrencias div.descricao{
+    margin: auto;
+    font-size: 1em;
+    color: rgb(68, 68, 68);
+}
+
+section#tela div#conteudo div#ultimasOcorrencias div.data{
+    margin: auto;
+    font-size: 1em;
+    color: rgb(68, 68, 68);
+}
+
+section#tela div#conteudo div#ultimasOcorrencias button{
+    width: 150px;
+    height: 40px;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat-Bold;
+    background-color: rgb(107, 107, 107);
+    outline: none;
+}
+
+section#tela div#conteudo div#ultimasOcorrencias button:hover{
+    background-color: rgb(68, 68, 68);
+}
+
+/*******************************************************************/
+/* Configurações do rodapé */
+
+footer#footer{
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    background-color: rgb(143, 2, 0);
+}
+
+footer#footer div{
+    margin: 5% auto;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
 }
