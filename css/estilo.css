@@ -124,9 +124,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 7px -7px auto;
+    margin: 0 2px -7px auto;
     padding: 1px;
-    width: 15px;
+    width: 25px;
     height: 15px;
     background-color: rgb(175, 6, 3);
     color: rgb(255, 255, 255);
@@ -302,9 +302,6 @@ section#tela div#conteudo{
 
 section#tela div#conteudo div#comunicado{
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 95%;
     height: auto;
     margin: 0 0 4% 0;
@@ -326,7 +323,17 @@ section#tela div#conteudo h1{
 /*******************************************************************/
 /* Configurações dos comunicados */
 
-section#tela div#conteudo div#comunicado div#titulo{
+section#tela div#conteudo div#comunicado div.containerComunicado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    height: auto;
+    margin: 2% 0;
+}
+
+section#tela div#conteudo div#comunicado div.titulo{
     width: 480px;
     height: auto;
     margin: 0 5% 0 0;
@@ -340,7 +347,7 @@ section#tela div#conteudo div#comunicado div#titulo{
     font-family: Montserrat-Bold;
 }
 
-section#tela div#conteudo div#comunicado div#menssage{
+section#tela div#conteudo div#comunicado div.menssage{
     width: 100%;
     height: auto;
     font-size: 1em;
