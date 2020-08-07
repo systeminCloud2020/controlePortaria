@@ -260,6 +260,17 @@ section#user div#dateTime p{
     margin-right: 15%;
 }
 
+section#user div#check{
+    margin: auto;
+}
+
+section#user div#check img{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+
 /*******************************************************************/
 /* Configurações da div linha e div triângulo */
 div.linha{
@@ -442,6 +453,91 @@ section#tela div#conteudo div#ultimasOcorrencias button{
 section#tela div#conteudo div#ultimasOcorrencias button:hover{
     background-color: rgb(68, 68, 68);
 }
+
+/*******************************************************************/
+/* Configurações das entregas pendentes */
+div#entregasPendentes{
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: 5% auto;
+}
+
+div#entregasPendentes table{
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+div#entregasPendentes td{
+    padding: 1%;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(107, 107, 107);
+}
+
+div#entregasPendentes button{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    color: rgb(68, 68, 68);
+}
+
+div#entregasPendentes button:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*******************************************************************/
+/* Configurações das checkList das Chaves */
+div#checkListChaves{
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: 5% auto;
+}
+
+div#checkListChaves table{
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+div#checkListChaves td{
+    padding: 1%;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(107, 107, 107);
+}
+
+div#checkListChaves button{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    color: rgb(68, 68, 68);
+}
+
+div#checkListChaves button:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+
 
 /*******************************************************************/
 /* Configurações do rodapé */

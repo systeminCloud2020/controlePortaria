@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle Portaria</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -24,48 +25,53 @@
                     </select>
                 </div>
                 <div class="msg">
-                    <p id="qtdMsg">30</p><img src="img/msg3.png" alt="">
+                    <p id="qtdMsg">30</p><img src="img/msg3.png" alt="Mensagens" title="Mensagens">
                 </div>
                 <div id="conf"><img src="img/finalizar.png" alt=""></div>
+                <div id="conf"><img src="img/login.png" alt="Login / Logout" title="Login / Logout"></div>
             </div>
         </header>
 
         <main id="main">
             <div id="container-main">
                 <section id="menu">
-                    <div class="img">
+                    <div class="img" title="Regimento" onclick="openRegimento()">
                         <img src="img/regimento.png" alt="">
                     </div>
 
-                    <div class="img">
+                    <div class="img" title="Manual" onclick="openManual()">
                         <img src="img/manual.png" alt="">
                     </div>
 
-                    <div class="img">
-                        <img src="img/ocorrencia.png" alt="Ocorrências" title="Ocorrências">
+                    <div class="img" title="Ocorrências" onclick="openOcorrencias()">
+                        <img src="img/ocorrencia.png" alt="Ocorrências">
                     </div>
 
-                    <div class="img">
+                    <div class="img" title="Correspondências" onclick="openCorreios()">
                         <img src="img/mail.png" alt="">
                     </div>
 
-                    <div class="img">
+                    <div class="img" title="Visitas" onclick="openVisitas()">
                         <img src="img/visits.png" alt="">
                     </div>
 
-                    <div class="img">
+                    <div class="img" title="Chaves" onclick="openChaves()">
+                        <img src="img/chaves.png" alt="">
+                    </div>
+
+                    <div class="img" title="Reservas" onclick="openReservas()">
                         <img src="img/reservas.png" alt="">
                     </div>
 
-                    <div class="img">
+                    <div class="img" title="Apartamentos" onclick="openApartamentos()">
                         <img src="img/apartamentos.png" alt="">
                     </div>
 
-                    <div class="img">
+                    <div class="img" title="Veículos" onclick="openVeiculos()">
                         <img src="img/veiculos.png" alt="">
                     </div>
 
-                    <div class="img">
+                    <div class="img" title="Multas" onclick="openMultas()">
                         <img src="img/multas.png" alt="">
                     </div>
                 </section>
@@ -84,6 +90,11 @@
                     <div id="dateTime">
                         <p id="date">05/08/2020</p>
                         <p id="time">08:00</p>
+                    </div>
+
+                    <!--Checar o material do posto de serviço... (monitores, celular, rádio, etc.-->
+                    <div id="check" onclick="valida()">
+                        <img id="checkImg" src="img/checkList.gif" alt="Check-List" title="Check-List">
                     </div>
 
                 </section>
@@ -131,6 +142,7 @@
 
                         </div>
 
+                        <!--Últimas Ocorrências-->
                         <div class="linha"></div>
                         <div class="triangulo"></div>
 
@@ -188,10 +200,100 @@
 
                         </div>
 
+                        <!--Pendências de entregas-->
                         <div class="linha"></div>
                         <div class="triangulo"></div>
 
                         <h1>Entregas Pendentes</h1>
+
+                        <div id="entregasPendentes">
+                            <table>
+                                <tr>
+                                    <th>Data</th>
+                                    <th>Bloco</th>
+                                    <th>Apartamento</th>
+                                    <th>Código de Rastreio</th>
+                                    <th>Tipo</th>
+                                </tr>
+
+                                <tr>
+                                    <td>07/08/2020</td>
+                                    <td>05</td>
+                                    <td>304</td>
+                                    <td>123456789-BR</td>
+                                    <td>Caixa</td>
+                                    <td><button type="button">Entregar</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td>07/08/2020</td>
+                                    <td>05</td>
+                                    <td>304</td>
+                                    <td>123456789-BR</td>
+                                    <td>Caixa</td>
+                                    <td><button type="button">Entregar</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td>07/08/2020</td>
+                                    <td>05</td>
+                                    <td>304</td>
+                                    <td>123456789-BR</td>
+                                    <td>Caixa</td>
+                                    <td><button type="button">Entregar</button></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!--Check List das Chaves-->
+                        <div class="linha"></div>
+                        <div class="triangulo"></div>
+
+                        <h1>Check-List Chaves</h1>
+
+                        <div id="checkListChaves">
+                            <table>
+                                <tr>
+                                    <th>Data Saída</th>
+                                    <th>Responsável</th>
+                                    <th>Bloco</th>
+                                    <th>Apartamento</th>
+                                    <th>Id Chave</th>
+                                    <th>Local</th>
+                                </tr>
+
+                                <tr>
+                                    <td>07/08/2020</td>
+                                    <td>João Pereira</td>
+                                    <td>08</td>
+                                    <td>103</td>
+                                    <td>56</td>
+                                    <td>Churrasqueira I</td>
+                                    <td><button type="button">Devolver</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td>07/08/2020</td>
+                                    <td>João Pereira</td>
+                                    <td>08</td>
+                                    <td>103</td>
+                                    <td>56</td>
+                                    <td>Churrasqueira I</td>
+                                    <td><button type="button">Devolver</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td>07/08/2020</td>
+                                    <td>João Pereira</td>
+                                    <td>08</td>
+                                    <td>103</td>
+                                    <td>56</td>
+                                    <td>Churrasqueira I</td>
+                                    <td><button type="button">Devolver</button></td>
+                                </tr>
+
+                            </table>
+                        </div>
 
                     </div>
                 </section>
