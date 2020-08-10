@@ -3,6 +3,13 @@
     padding: 0;
 }
 
+.displayBlock{
+    display: none;
+}
+#menu.displayBlock{
+    display: none;
+}
+
 @font-face {
 	font-family: Montserrat;
 	src: url(../fonts/Montserrat/Montserrat-Regular.ttf)
@@ -46,7 +53,7 @@ body{
     height: auto;
 }
 
-#header div.logo{
+#header div#logo{
     display: flex;
     align-items: center;
     justify-content: initial;
@@ -55,29 +62,47 @@ body{
     padding: 1%;
 }
 
-#header div.logo img{
+#header div#logo div{
+    display: flex;
+    align-items: center;
+    justify-content: initial;
+    width: 100%;
+    margin: auto;
+    padding: 1%;
+}
+
+#header div#logo div img{
     width: 70px;
     height: auto;
     margin: auto 2% auto 5%;
 }
 
-#header div.logo h1{
+#header div#logo div h1{
     color: rgb(68, 68, 68);
     font-size: 2.5em;
     margin: auto auto auto 2%;
     font-family: Montserrat-Bold;
 }
 
-#header div.menu{
+#header div#menu{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     text-align: right;
+    padding-right: 0;
+}
+
+#header div#menu div#manual{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    text-align: center;
     padding-right: 2%;
 }
 
-#header div.menu div{
+#header div#menu div{
     margin: auto;
     padding: 1%;
     border: none;
@@ -87,7 +112,7 @@ body{
     color: rgb(68, 68, 68);
 }
 
-#header div.menu select{
+#header div#menu select{
     border: none;
     padding: 2%;
     background-color: rgb(255, 255, 255);
@@ -98,7 +123,7 @@ body{
     color: rgb(68, 68, 68);
 }
 
-#header div.menu select option{
+#header div#menu select option{
     padding: 2%;
     background-color: rgb(255, 255, 255);
     font-size: 1em;
@@ -136,14 +161,14 @@ body{
     font-size: 0.8em;
 }
 
-#header div#conf{
+#header div.conf{
     width: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#header div#conf img{
+#header div.conf img{
     width: 70%;
 }
 
@@ -210,7 +235,7 @@ section#menu img{
 
 section#user{
     grid-area: user;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     position: relative;

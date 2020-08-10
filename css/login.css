@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+body{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+section#login{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 1s;
+    visibility: hidden;
+}
+
+section#login form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+    border: 10px solid rgb(175, 6, 3);
+    background-color: rgb(255, 255, 255);
+}
+
+section#login form div.all{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+section#login form div.data{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+section#login form input{
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    margin: auto auto 25px auto;
+    font-size: 15pt;
+    color: rgba(68, 68, 68, 0.466);
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.199);
+}
+
+section#login form div.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 10px auto auto auto;
+}
+
+section#login form button{
+    width: 120px;
+    height: 40px;
+    margin: auto;
+    color: rgb(255, 255, 255);
+    font-size: 15pt;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(175, 6, 3);
+}

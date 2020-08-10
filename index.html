@@ -6,35 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle Portaria</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/login.css">
     <script src="js/script.js"></script>
+    <link rel="shortcut icon" href="img/Logo.ico" type="image/x-icon">
 </head>
 
-<body>
+<body onload="loginNecessario(), criaImgLogin()">
     <div id="container-all">
         <header id="header">
-            <div class="logo">
-                <img src="img/Logo.png" alt="logo">
-                <h1>Controle de Portaria</h1>
+
+            <div id="logo">
+                
             </div>
-            <div class="menu">
-                <div>Manual do Sistema</div>
-                <div>
-                    <select name="condominio" id="condominio">
-                        <option value="Residencial Fiori">Residencial Fiori</option>
-                        <option value="Bosque das Acácias">Bosque das Acácias</option>
-                    </select>
+
+            <div id="menu">
+
+                <div id="manual"></div>
+                
+                <div id="select">
+                    
                 </div>
+                
                 <div class="msg">
                     <p id="qtdMsg">30</p><img src="img/msg3.png" alt="Mensagens" title="Mensagens">
                 </div>
-                <div id="conf"><img src="img/finalizar.png" alt=""></div>
-                <div id="conf"><img src="img/login.png" alt="Login / Logout" title="Login / Logout"></div>
+                <div class="conf"><img src="img/finalizar.png" alt=""></div>
+                <div id="imgLogin" class="conf"></div>
             </div>
+
         </header>
 
         <main id="main">
             <div id="container-main">
-                <section id="menu">
+                <section id="menu" class="displayBlock">
                     <div class="img" title="Regimento" onclick="openRegimento()">
                         <img src="img/regimento.png" alt="">
                     </div>
@@ -117,7 +121,7 @@
                                     obcaecati neque odio perspiciatis corporis? Facere ipsa, quis facilis vel rem natus
                                     blanditiis, repellendus dolore dolorem minus eligendi vero!</div>
 
-                                <button type="button">Ver mais</button>
+                                <button class="displayBlock" type="button">Ver mais</button>
                             </div>
 
                             <div class="containerComunicado">
@@ -127,7 +131,7 @@
                                     obcaecati neque odio perspiciatis corporis? Facere ipsa, quis facilis vel rem natus
                                     blanditiis, repellendus dolore dolorem minus eligendi vero!</div>
 
-                                <button type="button">Ver mais</button>
+                                <button class="displayBlock" type="button">Ver mais</button>
                             </div>
 
                             <div class="containerComunicado">
@@ -137,7 +141,7 @@
                                     obcaecati neque odio perspiciatis corporis? Facere ipsa, quis facilis vel rem natus
                                     blanditiis, repellendus dolore dolorem minus eligendi vero!</div>
 
-                                <button type="button">Ver mais</button>
+                                <button class="displayBlock" type="button">Ver mais</button>
                             </div>
 
                         </div>
@@ -163,7 +167,7 @@
                                 <div class="data">
                                     05/08/2020
                                 </div>
-                                <button type="button">Ver</button>
+                                <button class="displayBlock" type="button">Ver</button>
                             </div>
 
                             <div class="containerOcorrencias">
@@ -179,7 +183,7 @@
                                 <div class="data">
                                     05/08/2020
                                 </div>
-                                <button type="button">Ver</button>
+                                <button class="displayBlock" type="button">Ver</button>
                             </div>
 
                             <div class="containerOcorrencias">
@@ -195,7 +199,7 @@
                                 <div class="data">
                                     05/08/2020
                                 </div>
-                                <button type="button">Ver</button>
+                                <button class="displayBlock" type="button">Ver</button>
                             </div>
 
                         </div>
@@ -222,7 +226,7 @@
                                     <td>304</td>
                                     <td>123456789-BR</td>
                                     <td>Caixa</td>
-                                    <td><button type="button">Entregar</button></td>
+                                    <td><button class="displayBlock" type="button">Entregar</button></td>
                                 </tr>
 
                                 <tr>
@@ -231,7 +235,7 @@
                                     <td>304</td>
                                     <td>123456789-BR</td>
                                     <td>Caixa</td>
-                                    <td><button type="button">Entregar</button></td>
+                                    <td><button class="displayBlock" type="button">Entregar</button></td>
                                 </tr>
 
                                 <tr>
@@ -240,7 +244,7 @@
                                     <td>304</td>
                                     <td>123456789-BR</td>
                                     <td>Caixa</td>
-                                    <td><button type="button">Entregar</button></td>
+                                    <td><button class="displayBlock" type="button">Entregar</button></td>
                                 </tr>
                             </table>
                         </div>
@@ -269,7 +273,7 @@
                                     <td>103</td>
                                     <td>56</td>
                                     <td>Churrasqueira I</td>
-                                    <td><button type="button">Devolver</button></td>
+                                    <td><button class="displayBlock" type="button">Devolver</button></td>
                                 </tr>
 
                                 <tr>
@@ -279,7 +283,7 @@
                                     <td>103</td>
                                     <td>56</td>
                                     <td>Churrasqueira I</td>
-                                    <td><button type="button">Devolver</button></td>
+                                    <td><button class="displayBlock" type="button">Devolver</button></td>
                                 </tr>
 
                                 <tr>
@@ -289,7 +293,7 @@
                                     <td>103</td>
                                     <td>56</td>
                                     <td>Churrasqueira I</td>
-                                    <td><button type="button">Devolver</button></td>
+                                    <td><button class="displayBlock" type="button">Devolver</button></td>
                                 </tr>
 
                             </table>
@@ -326,6 +330,22 @@
         </footer>
 
     </div>
+
+    <section id="login">
+        <form action="">
+            <div class="all">
+            <div class="data">
+                <input type="text" name="nameLogin" id="nameLogin" placeholder="Login">
+                <input type="password" name="password" id="password" placeholder="Password">
+            </div>
+            <div class="buttons">
+                <button type="reset">Clear</button>
+                <button type="button" onclick="fechaLogin()">Cancel</button>
+                <button type="button" onclick="logando() ">Enter</button>
+            </div>
+        </div>
+        </form>
+    </section>
 
 
 </body>
